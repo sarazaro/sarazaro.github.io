@@ -13,6 +13,10 @@
   color: black;
 }
 
+.header-logo:hover {
+  color: #52866d;
+}
+
 .header-right-items {
   display: flex;
   flex: 1;
