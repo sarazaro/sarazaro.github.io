@@ -1,9 +1,13 @@
 import './App.css';
 import { createMuiTheme } from '@material-ui/core/styles';
-import { HashRouter, Route } from "react-router-dom";
+import { HashRouter, Route, Link } from "react-router-dom";
 import ThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
-import ButtonBase from "@material-ui/core/ButtonBase";
 import Home from "./components/Home";
+import MeInANutshell from "./components/MeInANutshell";
+import MyLife from "./components/MyLife";
+import Social from "./components/Social";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -12,38 +16,23 @@ function App() {
         <div className="app">
           <div className="header-container">
             <div className="header-logo">
-              <ButtonBase className="header-logo">Sara Zaro</ButtonBase>
+              <Link to="/" className="header-logo">Sara Zaro</Link>
             </div>
             <div className="header-right-items">
-              <div className="header-item-container">
-                <ButtonBase>
-                  <div className="header-item">Me in a nutshell</div>
-                </ButtonBase>
-              </div>
-              <div className="header-item-container">
-                <ButtonBase>
-                  <div className="header-item">My life</div>
-                </ButtonBase>
-              </div>
-              <div className="header-item-container">
-                  <ButtonBase>
-                    <div className="header-item">Social</div>
-                  </ButtonBase>
-              </div>
-              <div className="header-item-container">
-                  <ButtonBase>
-                    <div className="header-item">Resume</div>
-                  </ButtonBase>
-              </div>
-              <div className="header-item-container">
-                  <ButtonBase>
-                    <div className="header-item">Contact</div>
-                  </ButtonBase>
-              </div>
+                <Link to="/me-in-a-nutshell" className="header-item">Me in a nutshell</Link>
+                <Link to="/my-life" className="header-item">My life</Link>
+                <Link to="/social" className="header-item">Social</Link>
+                <Link to="/resume" className="header-item">Resume</Link>
+                <Link to="/contact" className="header-item">Contact</Link>
             </div>
           </div>
           <div className="content">
             <Route exact path="/" component={Home} />
+            <Route path="/me-in-a-nutshell" component={MeInANutshell} />
+            <Route path="/my-life" component={MyLife} />
+            <Route path="/social" component={Social} />
+            <Route path="/resume" component={Resume} />
+            <Route path="/contact" component={Contact} />
           </div>
         </div>
       </ThemeProvider>

@@ -9,6 +9,8 @@
 
 .header-logo {
   padding: 8px;
+  text-decoration: none;
+  color: black;
 }
 
 .header-right-items {
@@ -17,12 +19,14 @@
   justify-content: flex-end;
 }
 
-.header-item-container {
-  padding: 8px 16px;
+.header-item {
+  padding: 8px 24px;
+  text-decoration: none;
+  color: black;
 }
 
-.header-item {
-  padding: 8px 8px;
+.header-item:hover {
+  color: #c07c7c;
 }
 
 .content {
